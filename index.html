@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>玛雅论坛 亚洲电影 图霸天下 | 官方视频门户 - 影像社区与创作者平台</title>
+<meta name="description" content="玛雅论坛 亚洲电影 图霸天下官方网站，专注亚洲电影影像内容的视频品牌平台，汇聚创作者、专题企划与高品质原创内容生态，持续运营的亚洲电影社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1420'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff5a3c' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ffcf5c'/%3E%3Cpath d='M6 20h10M48 20h10M6 44h10M48 44h10' stroke='%23ff5a3c' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root{
+  --maya-bg:#0f1420;
+  --maya-bg-2:#151c2b;
+  --maya-surface:#1a2233;
+  --maya-surface-2:#212b40;
+  --maya-line:#2c3855;
+  --maya-text:#e8edf7;
+  --maya-muted:#9aa8c4;
+  --maya-accent:#ff5a3c;
+  --maya-accent-2:#ffcf5c;
+  --maya-cyan:#4fd1c5;
+  --maya-radius:16px;
+  --maya-shadow:0 18px 40px rgba(0,0,0,.35);
+  --maya-sticky:106px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--maya-sticky)}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(255,90,60,.16), transparent 60%),
+    radial-gradient(900px 500px at 5% 10%, rgba(79,209,197,.10), transparent 55%),
+    var(--maya-bg);
+  color:var(--maya-text);
+  font-family:"HarmonyOS Sans SC","PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0 0 .5em;line-height:1.25;font-weight:800}
+h2{font-size:clamp(22px,2.6vw,30px);letter-spacing:.5px}
+h3{font-size:clamp(17px,1.7vw,20px)}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+.maya-container{width:min(1180px,92vw);margin:0 auto}
+.maya-section{padding:64px 0 24px}
+.maya-section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:26px}
+.maya-section-head .maya-kicker{color:var(--maya-accent-2);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin:0 0 6px}
+.maya-section-head p{color:var(--maya-muted);margin:0;max-width:640px;font-size:14.5px}
+.maya-tag{display:inline-block;padding:3px 10px;border-radius:999px;background:rgba(255,90,60,.14);color:#ffb7a5;font-size:12px;border:1px solid rgba(255,90,60,.3)}
+.maya-btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 22px;
+  border:1px solid var(--maya-line);background:transparent;color:var(--maya-text);
+  font-size:14.5px;font-weight:600;cursor:pointer;transition:.25s;font-family:inherit;
+}
+.maya-btn:hover{transform:translateY(-2px);border-color:var(--maya-accent);color:#fff}
+.maya-btn--primary{background:linear-gradient(120deg,var(--maya-accent),#ff8a5c);border-color:transparent;color:#151014;box-shadow:0 10px 26px rgba(255,90,60,.28)}
+.maya-btn--primary:hover{color:#151014;filter:brightness(1.06)}
+.maya-btn--ghost{background:rgba(255,255,255,.04)}
+
+/* 公告 + 页头 */
+.maya-topbar{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);background:rgba(15,20,32,.92);border-bottom:1px solid var(--maya-line)}
+.maya-notice{display:flex;align-items:center;gap:12px;padding:8px 0;font-size:13px;color:#ffd9cf;overflow:hidden}
+.maya-notice .maya-notice-label{flex:none;background:var(--maya-accent);color:#150f0c;font-weight:800;padding:2px 10px;border-radius:6px;font-size:12px;letter-spacing:1px}
+.maya-notice-track{display:flex;gap:34px;white-space:nowrap;animation:mayaMarquee 26s linear infinite}
+.maya-notice-track span::before{content:"◆";color:var(--maya-accent-2);margin-right:8px;font-size:10px}
+@keyframes mayaMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.maya-header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.maya-brand{display:flex;align-items:center;gap:12px;min-width:0}
+.maya-brand-mark{width:42px;height:42px;flex:none;border-radius:12px;background:linear-gradient(140deg,#ff5a3c,#ffcf5c);display:grid;place-items:center;font-weight:900;color:#151014;font-size:18px}
+.maya-brand-name{font-size:17px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.maya-brand-sub{font-size:11.5px;color:var(--maya-muted);letter-spacing:2px;display:block;margin-top:-2px}
+.maya-nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.maya-nav a{padding:8px 13px;border-radius:9px;font-size:14.5px;color:var(--maya-muted);transition:.2s;white-space:nowrap}
+.maya-nav a:hover,.maya-nav a.maya-active{color:#fff;background:rgba(255,90,60,.16)}
+.maya-header-tools{display:flex;align-items:center;gap:10px}
+.maya-search{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid var(--maya-line);border-radius:999px;padding:5px 6px 5px 14px}
+.maya-search input{background:transparent;border:0;outline:0;color:var(--maya-text);width:150px;font-size:14px;font-family:inherit}
+.maya-search input::placeholder{color:#6e7d9c}
+.maya-search button{border:0;background:var(--maya-accent);color:#151014;font-weight:700;border-radius:999px;padding:6px 14px;cursor:pointer;font-size:13px;font-family:inherit}
+.maya-burger{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--maya-line);background:rgba(255,255,255,.04);color:#fff;font-size:18px;cursor:pointer}
+.maya-search-hint{font-size:12.5px;color:var(--maya-cyan);min-height:18px;margin-top:6px;text-align:right}
+
+/* 首屏 全幅主视觉背景 + 浮动文字 */
+.maya-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--maya-line)}
+.maya-hero-visual{position:relative;min-height:520px;display:flex;align-items:center}
+.maya-hero-visual > svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.maya-hero-inner{position:relative;z-index:2;padding:70px 0 64px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:end}
+.maya-hero h1{font-size:clamp(34px,5vw,62px);letter-spacing:1px;margin-bottom:14px;text-shadow:0 4px 30px rgba(0,0,0,.55)}
+.maya-hero h1 em{font-style:normal;color:var(--maya-accent-2)}
+.maya-hero-lead{font-size:clamp(15px,1.5vw,18px);color:#d7e0f2;max-width:640px}
+.maya-hero-card{background:rgba(15,20,32,.72);border:1px solid rgba(255,255,255,.14);border-radius:var(--maya-radius);padding:22px 24px;backdrop-filter:blur(10px)}
+.maya-hero-card h3{color:#fff;margin-bottom:8px}
+.maya-hero-card p{font-size:14px;color:#c2cde3;margin:0}
+.maya-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.maya-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.maya-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 16px}
+.maya-stat b{display:block;font-size:clamp(20px,2.4vw,28px);color:var(--maya-accent-2);line-height:1.2}
+.maya-stat span{font-size:12.5px;color:#a9b6d0}
+
+/* 通用卡片 */
+.maya-card{background:linear-gradient(160deg,var(--maya-surface),var(--maya-bg-2));border:1px solid var(--maya-line);border-radius:var(--maya-radius);padding:22px;transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+.maya-card:hover{transform:translateY(-4px);border-color:#42527a;box-shadow:var(--maya-shadow)}
+.maya-grid{display:grid;gap:20px}
+.maya-grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.maya-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.maya-grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.maya-meta{display:flex;flex-wrap:wrap;gap:12px;color:var(--maya-muted);font-size:12.5px;margin:10px 0}
+.maya-meta b{color:var(--maya-accent-2);font-weight:700}
+.maya-thumb{aspect-ratio:16/9;border-radius:12px;overflow:hidden;position:relative;background:var(--maya-surface-2);border:1px solid var(--maya-line)}
+.maya-thumb svg{width:100%;height:100%;display:block}
+.maya-thumb .maya-play{position:absolute;left:10px;bottom:10px;background:rgba(15,20,32,.8);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;padding:3px 9px;border-radius:999px;display:flex;align-items:center;gap:6px}
+.maya-thumb .maya-play::before{content:"";width:0;height:0;border-left:7px solid var(--maya-accent-2);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.maya-row{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-bottom:1px dashed var(--maya-line);min-width:0}
+.maya-row:last-child{border-bottom:0}
+.maya-row .maya-row-body{flex:1;min-width:0}
+.maya-row h3{margin-bottom:6px;font-size:17px}
+.maya-row p{color:var(--maya-muted);font-size:14px;margin:0 0 8px}
+.maya-row-num{flex:none;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(255,90,60,.15);color:var(--maya-accent-2);font-weight:900;border:1px solid rgba(255,90,60,.3)}
+.maya-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.maya-chip{border:1px solid var(--maya-line);background:rgba(255,255,255,.04);color:var(--maya-muted);border-radius:999px;padding:4px 12px;font-size:12.5px;cursor:pointer;transition:.2s;font-family:inherit}
+.maya-chip:hover{color:#fff;border-color:var(--maya-accent)}
+.maya-chip.maya-on{background:rgba(255,90,60,.2);color:#ffd3c7;border-color:var(--maya-accent)}
+
+/* 焦点区 */
+.maya-focus{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px}
+.maya-focus-main{position:relative}
+.maya-focus-main h3{font-size:clamp(20px,2.2vw,26px);margin-top:16px}
+.maya-side-list li{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--maya-line);min-width:0}
+.maya-side-list li:last-child{border-bottom:0}
+.maya-side-list .maya-mini{width:96px;flex:none;aspect-ratio:16/10;border-radius:9px;overflow:hidden;border:1px solid var(--maya-line)}
+.maya-side-list h4{margin:0 0 4px;font-size:14.5px;line-height:1.5}
+.maya-side-list .maya-meta{margin:0;font-size:12px}
+
+/* 作者 */
+.maya-author-card{display:flex;gap:16px;align-items:flex-start}
+.maya-avatar{width:60px;height:60px;flex:none;border-radius:16px;display:grid;place-items:center;font-weight:900;font-size:20px;color:#151014;border:1px solid rgba(255,255,255,.16)}
+.maya-author-body{min-width:0}
+.maya-author-body .maya-field{font-size:12.5px;color:var(--maya-cyan);letter-spacing:1px}
+.maya-author-body p{font-size:13.5px;color:var(--maya-muted);margin:6px 0 0}
+.maya-author-stats{display:flex;gap:16px;margin-top:8px;font-size:12.5px;color:var(--maya-muted)}
+.maya-author-stats b{color:#fff}
+
+/* 评论 双列短评 */
+.maya-comment{background:rgba(255,255,255,.03);border:1px solid var(--maya-line);border-radius:14px;padding:18px;min-width:0}
+.maya-comment .maya-comment-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.maya-comment .maya-avatar{width:36px;height:36px;border-radius:50%;font-size:14px}
+.maya-comment b{font-size:14px}
+.maya-comment .maya-stars{color:var(--maya-accent-2);font-size:12px;letter-spacing:2px}
+.maya-comment p{margin:6px 0 0;font-size:14px;color:#c8d3e8}
+.maya-comment .maya-comment-tag{font-size:11.5px;color:var(--maya-muted)}
+
+/* 专题 时间线 */
+.maya-topic{border-left:3px solid var(--maya-accent);padding:6px 0 6px 18px;margin-left:6px;position:relative}
+.maya-topic::before{content:"";position:absolute;left:-9px;top:14px;width:15px;height:15px;border-radius:50%;background:var(--maya-bg);border:3px solid var(--maya-accent-2)}
+.maya-topic h3{margin-bottom:4px}
+.maya-topic p{color:var(--maya-muted);font-size:14px;margin:0 0 8px}
+.maya-topic ol{margin:0;padding-left:18px;color:#c0cce2;font-size:14px}
+.maya-topic ol li{margin-bottom:5px}
+.maya-timeline{display:flex;flex-direction:column;gap:26px}
+
+/* 榜单 */
+.maya-rank-list{counter-reset:mayaRank;display:grid;gap:12px}
+.maya-rank-item{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:14px;padding:14px 16px;background:rgba(255,255,255,.03);border:1px solid var(--maya-line);border-radius:12px;transition:.2s}
+.maya-rank-item:hover{border-color:var(--maya-accent);background:rgba(255,90,60,.07)}
+.maya-rank-item::before{counter-increment:mayaRank;content:counter(mayaRank,decimal-leading-zero);font-weight:900;color:var(--maya-accent-2);font-size:17px}
+.maya-rank-item h4{margin:0;font-size:15px}
+.maya-rank-item span small{display:block;color:var(--maya-muted);font-size:12px}
+.maya-rank-item .maya-hot{font-size:12.5px;color:var(--maya-cyan);white-space:nowrap}
+
+/* FAQ */
+.maya-faq details{border:1px solid var(--maya-line);border-radius:12px;padding:0 18px;margin-bottom:12px;background:rgba(255,255,255,.03)}
+.maya-faq summary{cursor:pointer;padding:16px 0;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.maya-faq summary::-webkit-details-marker{display:none}
+.maya-faq summary::after{content:"+";color:var(--maya-accent);font-size:20px;font-weight:900;line-height:1}
+.maya-faq details[open] summary::after{content:"–"}
+.maya-faq details p{color:var(--maya-muted);font-size:14.5px;margin:0 0 16px}
+
+/* 动态 */
+.maya-news li{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--maya-line);font-size:14.5px;color:#c5d0e6;min-width:0}
+.maya-news li:last-child{border-bottom:0}
+.maya-news time{flex:none;color:var(--maya-accent-2);font-size:13px;font-weight:700;width:88px}
+.maya-news b{color:#fff}
+
+/* 合作 */
+.maya-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.maya-partner{border:1px solid var(--maya-line);border-radius:12px;padding:18px 14px;text-align:center;font-weight:700;color:#d3ddf0;background:rgba(255,255,255,.03);font-size:14.5px;transition:.2s}
+.maya-partner:hover{border-color:var(--maya-cyan);color:#fff}
+.maya-partner small{display:block;color:var(--maya-muted);font-weight:400;font-size:11.5px;margin-top:4px}
+
+/* 关键词解析长文 */
+.maya-article{background:linear-gradient(170deg,rgba(255,90,60,.07),rgba(79,209,197,.05));border:1px solid var(--maya-line);border-radius:20px;padding:clamp(22px,3.2vw,42px)}
+.maya-article h3{margin-top:26px;color:var(--maya-accent-2)}
+.maya-article h3:first-child{margin-top:0}
+.maya-article p{color:#c8d3e8;font-size:15.2px}
+.maya-article blockquote{margin:18px 0;padding:14px 18px;border-left:3px solid var(--maya-accent);background:rgba(255,255,255,.04);border-radius:0 10px 10px 0;color:#dbe4f5;font-size:14.5px}
+
+/* 投稿/联系 */
+.maya-cta{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:center;background:linear-gradient(120deg,rgba(255,90,60,.18),rgba(79,209,197,.12));border:1px solid var(--maya-line);border-radius:20px;padding:clamp(22px,3.2vw,38px)}
+.maya-cta p{color:#d3ddf0;margin-bottom:12px}
+
+/* 页脚 */
+.maya-footer{border-top:1px solid var(--maya-line);margin-top:60px;padding:46px 0 26px;background:rgba(10,14,23,.6)}
+.maya-footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:26px}
+.maya-footer h4{font-size:14.5px;color:#fff;margin-bottom:12px}
+.maya-footer li{font-size:13.5px;color:var(--maya-muted);margin-bottom:8px}
+.maya-footer a:hover{color:var(--maya-accent-2)}
+.maya-footer-bottom{margin-top:30px;padding-top:18px;border-top:1px solid var(--maya-line);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#7f8daa}
+
+/* 弹窗/Toast/回顶 */
+.maya-modal{position:fixed;inset:0;z-index:120;display:none;place-items:center;padding:20px;background:rgba(5,8,14,.72);backdrop-filter:blur(6px)}
+.maya-modal.maya-open{display:grid}
+.maya-modal-box{width:min(560px,94vw);max-height:82vh;overflow:auto;background:var(--maya-bg-2);border:1px solid var(--maya-line);border-radius:18px;padding:26px;box-shadow:var(--maya-shadow)}
+.maya-modal-box h3{color:var(--maya-accent-2)}
+.maya-modal-close{float:right;border:0;background:rgba(255,255,255,.08);color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:16px}
+.maya-toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,26px);background:#fff;color:#151014;padding:11px 22px;border-radius:999px;font-size:14px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:200;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.maya-toast.maya-show{opacity:1;transform:translate(-50%,0)}
+.maya-totop{position:fixed;right:20px;bottom:20px;z-index:90;width:46px;height:46px;border-radius:50%;border:1px solid var(--maya-line);background:var(--maya-surface);color:var(--maya-accent-2);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;font-weight:900}
+.maya-totop.maya-show{opacity:1;pointer-events:auto}
+
+@media (max-width:1000px){
+  .maya-hero-inner{grid-template-columns:1fr;align-items:start}
+  .maya-focus{grid-template-columns:1fr}
+  .maya-grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .maya-grid--3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .maya-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .maya-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .maya-cta{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  :root{--maya-sticky:112px}
+  .maya-nav{display:none;width:100%;order:4;flex-direction:column;align-items:stretch;padding:8px 0}
+  .maya-nav.maya-open{display:flex}
+  .maya-burger{display:block}
+  .maya-header{flex-wrap:wrap}
+  .maya-header-tools{width:100%;justify-content:space-between}
+  .maya-search{flex:1}
+  .maya-search input{width:100%}
+  .maya-grid--2,.maya-grid--3,.maya-grid--4{grid-template-columns:1fr}
+  .maya-footer-grid{grid-template-columns:1fr}
+  .maya-stats{grid-template-columns:1fr}
+  .maya-hero-visual{min-height:0}
+  .maya-hero-inner{padding:44px 0 40px}
+  .maya-notice{font-size:12px}
+  .maya-section{padding:46px 0 18px}
+  .maya-partners{grid-template-columns:1fr 1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="maya-topbar">
+  <div class="maya-container">
+    <div class="maya-notice">
+      <span class="maya-notice-label">官方发布</span>
+      <div class="maya-notice-track">
+        <span>《亚洲电影观察·第七季》专题于11月20日上线，首批收录18部作品</span>
+        <span>「图霸天下」影像征集第二季开启报名，12月15日截止</span>
+        <span>玛雅论坛创作者激励计划第十二期名单公布，新增27位优质作者</span>
+        <span>高清片源库更新：修复12部经典影片的4K修复条目</span>
+        <span>《亚洲电影观察·第七季》专题于11月20日上线，首批收录18部作品</span>
+        <span>「图霸天下」影像征集第二季开启报名，12月15日截止</span>
+        <span>玛雅论坛创作者激励计划第十二期名单公布，新增27位优质作者</span>
+        <span>高清片源库更新：修复12部经典影片的4K修复条目</span>
+      </div>
+    </div>
+    <header class="maya-header" id="mayaTop">
+      <a class="maya-brand" href="#mayaTop">
+        <span class="maya-brand-mark">玛</span>
+        <span>
+          <span class="maya-brand-name">玛雅论坛 亚洲电影 图霸天下</span>
+          <span class="maya-brand-sub">MAYA ASIAN CINEMA · 官方视频门户</span>
+        </span>
+      </a>
+      <nav class="maya-nav" id="mayaNav" aria-label="主导航">
+        <a href="#mayaFocus" class="maya-active">焦点</a>
+        <a href="#mayaVideos">影像</a>
+        <a href="#mayaTopics">专题企划</a>
+        <a href="#mayaAuthors">创作者</a>
+        <a href="#mayaInsight">关键词解析</a>
+        <a href="#mayaRank">榜单</a>
+        <a href="#mayaFaq">帮助</a>
+      </nav>
+      <div class="maya-header-tools">
+        <form class="maya-search" id="mayaSearchForm" role="search">
+          <input id="mayaSearchInput" type="search" placeholder="搜索影片、专题、创作者" aria-label="站内搜索">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="maya-burger" id="mayaBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <div class="maya-search-hint" id="mayaSearchHint" aria-live="polite"></div>
+  </div>
+</div>
+
+<!-- 首屏：全幅主视觉背景与浮动文字 -->
+<section class="maya-hero" aria-labelledby="mayaHeroTitle">
+  <div class="maya-hero-visual">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="玛雅论坛亚洲电影图霸天下品牌主视觉：暗色影院空间中一道放映光束穿过玛雅纹样与胶片孔">
+      <defs>
+        <linearGradient id="mayaHeroBg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#0b101c"/>
+          <stop offset=".55" stop-color="#141d2f"/>
+          <stop offset="1" stop-color="#1d1420"/>
+        </linearGradient>
+        <linearGradient id="mayaBeam" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ff5a3c" stop-opacity="0"/>
+          <stop offset=".5" stop-color="#ffcf5c" stop-opacity=".75"/>
+          <stop offset="1" stop-color="#ff5a3c" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="mayaGlow" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#ff8a5c" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#ff8a5c" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="mayaCineHoles" width="46" height="26" patternUnits="userSpaceOnUse">
+          <rect width="46" height="26" fill="none"/>
+          <rect x="4" y="6" width="20" height="14" rx="3" fill="#2a3a58" opacity=".8"/>
+        </pattern>
+        <pattern id="mayaMayanGlyph" width="120" height="120" patternUnits="userSpaceOnUse">
+          <path d="M20 20h30v8h-22v22h-8zM70 20h30v30h-8V28H70zM20 70h8v22h22v8H20zM70 88h22V70h8v30H70z" fill="#ff5a3c" opacity=".18"/>
+          <circle cx="60" cy="60" r="6" fill="#ffcf5c" opacity=".22"/>
+        </pattern>
+      </defs>
+      <rect width="1600" height="900" fill="url(#mayaHeroBg)"/>
+      <rect width="1600" height="900" fill="url(#mayaMayanGlyph)"/>
+      <rect y="60" width="1600" height="26" fill="url(#mayaCineHoles)" opacity=".5"/>
+      <rect y="814" width="1600" height="26" fill="url(#mayaCineHoles)" opacity=".5"/>
+      <ellipse cx="1090" cy="420" rx="460" ry="330" fill="url(#mayaGlow)"/>
+      <polygon points="0,720 1600,150 1600,330 0,820" fill="url(#mayaBeam)" opacity=".5"/>
+      <g opacity=".92">
+        <circle cx="1090" cy="420" r="150" fill="#0d1421" stroke="#ff5a3c" stroke-width="6"/>
+        <circle cx="1090" cy="420" r="96" fill="none" stroke="#ffcf5c" stroke-width="3" stroke-dasharray="14 12"/>
+        <circle cx="1090" cy="420" r="38" fill="#ff5a3c" opacity=".85"/>
+        <circle cx="1090" cy="420" r="14" fill="#0d1421"/>
+        <path d="M1000 330 L1060 300 L1010 350Z" fill="#ffcf5c" opacity=".7"/>
+        <path d="M1180 510 L1120 540 L1170 490Z" fill="#ffcf5c" opacity=".7"/>
+      </g>
+      <g opacity=".55">
+        <path d="M140 220h200v14H140zM140 256h150v10H140zM140 286h180v10H140z" fill="#4fd1c5"/>
+      </g>
+      <g fill="#ff5a3c" opacity=".8">
+        <rect x="120" y="620" width="240" height="10" rx="5"/>
+        <rect x="120" y="650" width="160" height="10" rx="5" fill="#ffcf5c" opacity=".9"/>
+      </g>
+      <g transform="translate(1260,650)" fill="none" stroke="#ffcf5c" stroke-width="3" opacity=".7">
+        <rect x="0" y="0" width="180" height="110" rx="12"/>
+        <circle cx="46" cy="44" r="14"/>
+        <circle cx="120" cy="44" r="14"/>
+        <path d="M30 90h120"/>
+      </g>
+    </svg>
+
+    <div class="maya-container">
+      <div class="maya-hero-inner">
+        <div>
+          <p class="maya-kicker" style="color:var(--maya-accent-2);letter-spacing:4px;font-size:13px;margin-bottom:10px">ASIAN CINEMA · OFFICIAL</p>
+          <h1 id="mayaHeroTitle">玛雅论坛 亚洲电影 <em>图霸天下</em></h1>
+          <p class="maya-hero-lead">作为专注亚洲电影的影像品牌与视频门户，我们以官方网站的身份，为创作者、影迷与影视企业搭建高品质内容生态，提供原创、正版、高清的影像内容与长期陪伴式的社区讨论。</p>
+          <div class="maya-hero-actions">
+            <a class="maya-btn maya-btn--primary" href="#mayaVideos">浏览影像内容</a>
+            <a class="maya-btn" href="#mayaTopics">进入专题企划</a>
+            <button class="maya-btn maya-btn--ghost" id="mayaShareBtn" type="button">分享本站</button>
+          </div>
+        </div>
+        <div class="maya-hero-card">
+          <h3>企业简介</h3>
+          <p>玛雅论坛 亚洲电影 图霸天下是持续运营的亚洲电影垂直影像平台。官网汇聚亚洲各国导演访谈、经典修复、影展现场与创作者实验短片，以专业策展与社区共创为核心，服务影迷、创作者与影视机构。我们坚持用户至上与匠心选片，用真实、温暖的影像记录行业变化，让每一部作品被看见、被讨论、被留存。</p>
+          <div class="maya-stats">
+            <div class="maya-stat"><b data-maya-count="2860">2860</b><span>收录影像条目</span></div>
+            <div class="maya-stat"><b data-maya-count="418">418</b><span>合作创作者</span></div>
+            <div class="maya-stat"><b data-maya-count="96">96</b><span>专题企划场次</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 焦点内容 -->
+<section class="maya-section maya-container" id="mayaFocus" aria-labelledby="mayaFocusTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Focus</p>
+      <h2 id="mayaFocusTitle">焦点推荐｜本周玛雅论坛精选亚洲电影</h2>
+    </div>
+    <p>编辑部从近期更新中挑出四组重点内容，覆盖修复、访谈、纪录与实验影像，均由创作者授权发布，保证原创与高清播放体验。</p>
+  </div>
+  <div class="maya-focus">
+    <article class="maya-card maya-focus-main">
+      <div class="maya-thumb">
+        <svg viewBox="0 0 640 360" role="img" aria-label="焦点封面：雨夜霓虹街头，一位撑伞行人走向老式影院门口">
+          <defs>
+            <linearGradient id="mayaF1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#12203a"/>
+              <stop offset="1" stop-color="#241a2c"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="360" fill="url(#mayaF1)"/>
+          <g opacity=".9">
+            <rect x="40" y="90" width="120" height="230" fill="#1b2c4a"/>
+            <rect x="180" y="140" width="90" height="180" fill="#16324a"/>
+            <rect x="430" y="70" width="160" height="250" fill="#1e2740"/>
+          </g>
+          <g fill="#ffcf5c" opacity=".85">
+            <rect x="58" y="110" width="16" height="16"/><rect x="90" y="110" width="16" height="16"/>
+            <rect x="58" y="150" width="16" height="16"/><rect x="120" y="150" width="16" height="16"/>
+            <rect x="452" y="100" width="20" height="20"/><rect x="500" y="100" width="20" height="20"/>
+            <rect x="452" y="150" width="20" height="20"/><rect x="548" y="150" width="20" height="20"/>
+          </g>
+          <rect x="250" y="200" width="140" height="120" fill="#0d1524" stroke="#ff5a3c" stroke-width="3"/>
+          <rect x="268" y="214" width="104" height="62" fill="#ff5a3c" opacity=".25"/>
+          <text x="320" y="252" fill="#ffcf5c" font-size="20" text-anchor="middle" font-family="sans-serif">CINEMA</text>
+          <g stroke="#4fd1c5" stroke-width="1.4" opacity=".55">
+            <path d="M0 330 L640 300"/><path d="M0 344 L640 318"/>
+          </g>
+          <g>
+            <ellipse cx="330" cy="300" rx="46" ry="8" fill="#000" opacity=".4"/>
+            <path d="M292 300 L368 300 L352 210 L308 210Z" fill="#0a0e18"/>
+            <path d="M300 300 L360 300" stroke="#ff5a3c" stroke-width="3" opacity=".7"/>
+            <path d="M310 210 Q330 176 350 210" fill="none" stroke="#ff5a3c" stroke-width="4"/>
+            <path d="M330 210 L330 176" stroke="#ffcf5c" stroke-width="3"/>
+          </g>
+        </svg>
+        <span class="maya-play">正片 38:12</span>
+      </div>
+      <h3>《雨夜影院线》第一集：亚洲老影院的最后一排座位</h3>
+      <p>从曼谷到台北，摄制组用三个月走访七家仍在营业的老式影院。本期完整记录放映员李师傅的日常，以及他保存三十年的手写排片本。影片为4K修复版本，配合现场原声与方言字幕。</p>
+      <div class="maya-meta">
+        <span class="maya-tag">城市探索</span>
+        <span>作者 <b>夜航放映员</b></span>
+        <span>播放 <b data-maya-count="128400">12.8万</b></span>
+        <span>收藏 <b data-maya-count="9642">9642</b></span>
+      </div>
+      <div class="maya-actions">
+        <button class="maya-chip" data-maya-like data-count="3841">赞 3841</button>
+        <button class="maya-chip" data-maya-fav>收藏</button>
+        <button class="maya-chip" data-maya-copy>复制链接</button>
+      </div>
+    </article>
+    <div class="maya-card">
+      <h3 style="margin-bottom:14px">更多值得一看</h3>
+      <ul class="maya-side-list">
+        <li>
+          <div class="maya-mini">
+            <svg viewBox="0 0 160 100" role="img" aria-label="缩略图：导演访谈现场两支话筒与木桌">
+              <rect width="160" height="100" fill="#1c2b46"/>
+              <rect x="0" y="72" width="160" height="28" fill="#2a2033"/>
+              <rect x="34" y="30" width="10" height="46" rx="5" fill="#ff5a3c"/>
+              <rect x="92" y="24" width="10" height="52" rx="5" fill="#4fd1c5"/>
+              <circle cx="39" cy="26" r="9" fill="#ffcf5c"/>
+              <circle cx="97" cy="20" r="9" fill="#e8edf7" opacity=".8"/>
+            </svg>
+          </div>
+          <div>
+            <h4>导演木野雅之谈亚洲合拍片的情绪语法</h4>
+            <div class="maya-meta"><span>人物访谈</span><span>播放 6.4万</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="maya-mini">
+            <svg viewBox="0 0 160 100" role="img" aria-label="缩略图：胶卷片上排列的修复画面格">
+              <rect width="160" height="100" fill="#231b2e"/>
+              <g fill="#171f30">
+                <rect x="6" y="22" width="40" height="56" rx="4"/>
+                <rect x="60" y="22" width="40" height="56" rx="4"/>
+                <rect x="114" y="22" width="40" height="56" rx="4"/>
+              </g>
+              <g fill="#ffcf5c" opacity=".85">
+                <rect x="14" y="30" width="24" height="40"/>
+                <rect x="68" y="30" width="24" height="40" opacity=".6"/>
+                <rect x="122" y="30" width="24" height="40" opacity=".4"/>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h4>经典修复对照：从划痕到高清的十二道工序</h4>
+            <div class="maya-meta"><span>深度测评</span><span>播放 9.1万</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="maya-mini">
+            <svg viewBox="0 0 160 100" role="img" aria-label="缩略图：海岸线航拍与小型纪录片摄制船">
+              <rect width="160" height="100" fill="#0f2b3a"/>
+              <path d="M0 62 Q40 46 80 62 T160 62 V100 H0Z" fill="#1c4b5c"/>
+              <path d="M0 74 Q50 60 100 74 T160 70 V100 H0Z" fill="#123543"/>
+              <path d="M64 58 l26 0 l-4 10 l-18 0Z" fill="#ff5a3c"/>
+              <circle cx="122" cy="24" r="10" fill="#ffcf5c" opacity=".9"/>
+            </svg>
+          </div>
+          <div>
+            <h4>海岸纪录片《潮汐那年》完整幕后纪录</h4>
+            <div class="maya-meta"><span>创作幕后</span><span>播放 4.7万</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="maya-mini">
+            <svg viewBox="0 0 160 100" role="img" aria-label="缩略图：胶片剪辑台上的手绘分镜纸">
+              <rect width="160" height="100" fill="#2b2233"/>
+              <rect x="18" y="16" width="124" height="68" rx="6" fill="#e7dfd0" opacity=".12"/>
+              <g stroke="#ff5a3c" stroke-width="2" fill="none">
+                <rect x="30" y="28" width="34" height="24"/>
+                <rect x="74" y="28" width="34" height="24"/>
+                <rect x="118" y="28" width="16" height="24"/>
+              </g>
+              <g stroke="#4fd1c5" stroke-width="2">
+                <path d="M30 68 h104"/><path d="M30 76 h64"/>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h4>分镜到成片：五分钟短片的三次重剪</h4>
+            <div class="maya-meta"><span>教程干货</span><span>播放 3.9万</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 影像区：三列等高卡片 -->
+<section class="maya-section maya-container" id="mayaVideos" aria-labelledby="mayaVideosTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Screening Room</p>
+      <h2 id="mayaVideosTitle">影像放映厅｜玛雅论坛亚洲电影条目</h2>
+    </div>
+    <p>所有条目均标注清晰的分区与时长，支持点赞、收藏与链接复制。重点推荐配独立封面，其余以文字摘要呈现，方便快速筛选。</p>
+  </div>
+  <div class="maya-grid maya-grid--3">
+    <article class="maya-card">
+      <div class="maya-thumb">
+        <svg viewBox="0 0 480 270" role="img" aria-label="影像封面：深夜便利店门口向外望去的街道灯影">
+          <defs><linearGradient id="mayaV1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14243a"/><stop offset="1" stop-color="#2c1c2a"/></linearGradient></defs>
+          <rect width="480" height="270" fill="url(#mayaV1)"/>
+          <rect x="26" y="70" width="180" height="200" fill="#0e1828" stroke="#4fd1c5" stroke-opacity=".4"/>
+          <g fill="#ffcf5c" opacity=".85"><rect x="44" y="92" width="60" height="12"/><rect x="44" y="118" width="90" height="8"/><rect x="44" y="138" width="70" height="8"/></g>
+          <rect x="250" y="150" width="200" height="120" fill="#131c2e"/>
+          <g stroke="#ff5a3c" stroke-width="3" opacity=".8"><path d="M250 180 h200"/><path d="M250 214 h200"/></g>
+          <circle cx="360" cy="96" r="26" fill="#ff5a3c" opacity=".35"/>
+        </svg>
+        <span class="maya-play">17:44</span>
+      </div>
+      <h3>《便利店四点档》· 城市夜归人短片</h3>
+      <p>用一个夜班店员的视角串起四位夜归客的故事，全片自然光拍摄，台词极少，依靠环境声推进。</p>
+      <div class="maya-meta"><span class="maya-tag" data-maya-tag="治愈影像">治愈影像</span><span>阿岸</span><span>播放 5.6万</span></div>
+      <div class="maya-actions">
+        <button class="maya-chip" data-maya-like data-count="2208">赞 2208</button>
+        <button class="maya-chip" data-maya-fav>收藏</button>
+        <button class="maya-chip" data-maya-copy>复制链接</button>
+      </div>
+    </article>
+
+    <article class="maya-card">
+      <div class="maya-thumb">
+        <svg viewBox="0 0 480 270" role="img" aria-label="影像封面：剪辑室双屏时间线与摊开的分镜笔记">
+          <rect width="480" height="270" fill="#101a2b"/>
+          <g>
+            <rect x="30" y="36" width="190" height="110" rx="6" fill="#1c2a44" stroke="#4fd1c5" stroke-opacity=".6"/>
+            <rect x="260" y="36" width="190" height="110" rx="6" fill="#1c2a44" stroke="#ff5a3c" stroke-opacity=".6"/>
+            <g fill="#ffcf5c"><rect x="42" y="52" width="120" height="8"/><rect x="42" y="70" width="160" height="6" opacity=".6"/><rect x="42" y="86" width="90" height="6" opacity=".4"/></g>
+            <g fill="#4fd1c5"><rect x="272" y="52" width="90" height="8"/><rect x="272" y="70" width="140" height="6" opacity=".6"/><rect x="272" y="86" width="60" height="6" opacity=".4"/></g>
+          </g>
+          <rect x="40" y="168" width="400" height="70" rx="8" fill="#1a2438" stroke="#2c3855"/>
+          <g fill="#ff5a3c" opacity=".8"><rect x="56" y="186" width="60" height="34" rx="4"/><rect x="124" y="186" width="110" height="34" rx="4" opacity=".6"/><rect x="242" y="186" width="80" height="34" rx="4" opacity=".5"/><rect x="330" y="186" width="94" height="34" rx="4" opacity=".35"/></g>
+        </svg>
+        <span class="maya-play">22:06</span>
+      </div>
+      <h3>《一场雨的三次重剪》· 剪辑实操拆解</h3>
+      <p>把同一素材剪成悬疑、文艺与家庭三种气质，逐帧对照节奏与配乐选择，适合刚入门短片的创作者。</p>
+      <div class="maya-meta"><span class="maya-tag" data-maya-tag="教程干货">教程干货</span><span>张十九</span><span>播放 7.2万</span></div>
+      <div class="maya-actions">
+        <button class="maya-chip" data-maya-like data-count="3105">赞 3105</button>
+        <button class="maya-chip" data-maya-fav>收藏</button>
+        <button class="maya-chip" data-maya-copy>复制链接</button>
+      </div>
+    </article>
+
+    <article class="maya-card">
+      <div class="maya-thumb">
+        <svg viewBox="0 0 480 270" role="img" aria-label="影像封面：东南亚市集长镜头里的灯笼与人群剪影">
+          <rect width="480" height="270" fill="#241a1c"/>
+          <rect y="170" width="480" height="100" fill="#3a2626"/>
+          <g>
+            <ellipse cx="90" cy="70" rx="30" ry="20" fill="#ff5a3c" opacity=".8"/>
+            <ellipse cx="180" cy="52" rx="24" ry="16" fill="#ffcf5c" opacity=".7"/>
+            <ellipse cx="280" cy="80" rx="28" ry="18" fill="#ff8a5c" opacity=".6"/>
+            <ellipse cx="380" cy="58" rx="26" ry="17" fill="#ff5a3c" opacity=".5"/>
+          </g>
+          <g fill="#0f1219" opacity=".85">
+            <circle cx="120" cy="180" r="16"/><rect x="104" y="196" width="32" height="60" rx="8"/>
+            <circle cx="230" cy="174" r="14"/><rect x="216" y="188" width="28" height="68" rx="8"/>
+            <circle cx="330" cy="184" r="15"/><rect x="315" y="199" width="30" height="57" rx="8"/>
+            <circle cx="420" cy="172" r="13"/><rect x="407" y="185" width="26" height="71" rx="7"/>
+          </g>
+          <path d="M0 236 Q120 214 240 236 T480 236" stroke="#4fd1c5" stroke-width="2" fill="none" opacity=".5"/>
+        </svg>
+        <span class="maya-play">31:19</span>
+      </div>
+      <h3>《夜市十二点》· 一镜到底的市集记录</h3>
+      <p>跟随曼谷夜市摊主完成一整条街的行走拍摄，讨论手持长镜头的稳定训练与收音方案。</p>
+      <div class="maya-meta"><span class="maya-tag" data-maya-tag="在地文化">在地文化</span><span>素坤观察</span><span>播放 4.1万</span></div>
+      <div class="maya-actions">
+        <button class="maya-chip" data-maya-like data-count="1690">赞 1690</button>
+        <button class="maya-chip" data-maya-fav>收藏</button>
+        <button class="maya-chip" data-maya-copy>复制链接</button>
+      </div>
+    </article>
+  </div>
+
+  <div class="maya-card" style="margin-top:20px">
+    <h3>更多条目 · 文字索引</h3>
+    <ul>
+      <li class="maya-row">
+        <span class="maya-row-num">04</span>
+        <div class="maya-row-body">
+          <h3>《台词之前》· 亚洲电影对白设计四人谈</h3>
+          <p>四位编剧围坐讨论方言、留白与生活化台词，附完整逐字稿与字幕文件下载入口。</p>
+          <div class="maya-meta"><span class="maya-tag" data-maya-tag="人物访谈">人物访谈</span><span>作者 陈默</span><span>播放 3.4万</span><span>收藏 2840</span></div>
+          <div class="maya-actions"><button class="maya-chip" data-maya-like data-count="1420">赞 1420</button><button class="maya-chip" data-maya-fav>收藏</button></div>
+        </div>
+      </li>
+      <li class="maya-row">
+        <span class="maya-row-num">05</span>
+        <div class="maya-row-body">
+          <h3>《海岸那年》· 潮汐纪录长片幕后手记</h3>
+          <p>记录团队在台风季拍片的四十天，重点讲设备防护与潮汐表使用经验，附打板流程清单。</p>
+          <div class="maya-meta"><span class="maya-tag" data-maya-tag="创作幕后">创作幕后</span><span>作者 盐田计划</span><span>播放 2.9万</span><span>收藏 2210</span></div>
+          <div class="maya-actions"><button class="maya-chip" data-maya-like data-count="1180">赞 1180</button><button class="maya-chip" data-maya-fav>收藏</button></div>
+        </div>
+      </li>
+      <li class="maya-row">
+        <span class="maya-row-num">06</span>
+        <div class="maya-row-body">
+          <h3>《老片新声》· 修复影片的声音重建实践</h3>
+          <p>从底噪清理到环境声铺底，演示三个修复阶段的听感差异，并给出可复用的参数模板。</p>
+          <div class="maya-meta"><span class="maya-tag" data-maya-tag="深度测评">深度测评</span><span>作者 声音档案室</span><span>播放 3.7万</span><span>收藏 3050</span></div>
+          <div class="maya-actions"><button class="maya-chip" data-maya-like data-count="1560">赞 1560</button><button class="maya-chip" data-maya-fav>收藏</button></div>
+        </div>
+      </li>
+      <li class="maya-row">
+        <span class="maya-row-num">07</span>
+        <div class="maya-row-body">
+          <h3>《小城放映队》· 流动放映三十年的在地记录</h3>
+          <p>跟拍一支乡镇流动放映队，讲设备更新、观众变化与放映队与村庄之间的长期关系。</p>
+          <div class="maya-meta"><span class="maya-tag" data-maya-tag="品牌故事">品牌故事</span><span>作者 老周</span><span>播放 5.2万</span><span>收藏 4180</span></div>
+          <div class="maya-actions"><button class="maya-chip" data-maya-like data-count="2360">赞 2360</button><button class="maya-chip" data-maya-fav>收藏</button></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 专题企划：图文交替 / 时间线 -->
+<section class="maya-section maya-container" id="mayaTopics" aria-labelledby="mayaTopicsTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Editorial Program</p>
+      <h2 id="mayaTopicsTitle">专题企划｜图霸天下与亚洲电影观察</h2>
+    </div>
+    <p>专题由官方策展团队与社区创作者共同维护，包含策展说明、更新状态与内容条目，持续更新中。</p>
+  </div>
+  <div class="maya-grid maya-grid--2">
+    <article class="maya-card">
+      <div class="maya-thumb">
+        <svg viewBox="0 0 560 300" role="img" aria-label="专题封面：图霸天下「影像征集」条幅、相机取景框与老照片堆叠">
+          <rect width="560" height="300" fill="#152033"/>
+          <rect x="0" y="0" width="560" height="66" fill="#ff5a3c" opacity=".16"/>
+          <text x="30" y="44" fill="#ffcf5c" font-size="26" font-family="sans-serif" font-weight="bold">图霸天下 · 影像征集</text>
+          <g>
+            <rect x="40" y="96" width="170" height="120" rx="8" fill="#22304a" stroke="#4fd1c5"/>
+            <rect x="72" y="120" width="106" height="72" fill="#0f1828"/>
+            <circle cx="125" cy="156" r="22" fill="none" stroke="#ffcf5c" stroke-width="3"/>
+            <path d="M125 138 v36 M107 156 h36" stroke="#ff5a3c" stroke-width="2"/>
+            <rect x="220" y="112" width="120" height="104" rx="6" fill="#e7dfd0" opacity=".18" transform="rotate(-6 280 164)"/>
+            <rect x="252" y="128" width="120" height="104" rx="6" fill="#e7dfd0" opacity=".26" transform="rotate(4 312 180)"/>
+            <rect x="286" y="118" width="120" height="104" rx="6" fill="#ffcf5c" opacity=".22" transform="rotate(9 346 170)"/>
+          </g>
+          <g fill="#4fd1c5" opacity=".7">
+            <rect x="60" y="244" width="180" height="8" rx="4"/>
+            <rect x="60" y="262" width="120" height="8" rx="4" opacity=".6"/>
+          </g>
+        </svg>
+        <span class="maya-play">专题合辑 · 18 部</span>
+      </div>
+      <h3 style="margin-top:16px">图霸天下 · 第二季影像征集</h3>
+      <p>面向所有创作者开放，主题围绕「一座城市的一段影像」。评审由官方策展组与往届入选创作者共同组成，入选作品将在官网专题页长期展示。</p>
+      <div class="maya-meta"><span class="maya-tag">报名进行中</span><span>截止 12月15日</span><span>已收稿 316 部</span></div>
+      <ol style="color:#c6d2e8;font-size:14.5px;padding-left:20px;margin:12px 0 0">
+        <li>《桥上三分钟》· 记录早高峰桥面人群情绪的定格长镜</li>
+        <li>《档案柜第7层》· 老照片修复与当事人重访</li>
+        <li>《凌晨的面包房》· 一个人、一间店、一炉面包的十二小时</li>
+      </ol>
+      <div class="maya-actions"><button class="maya-chip" data-maya-submit>我要投稿</button><button class="maya-chip" data-maya-copy>复制专题链接</button></div>
+    </article>
+
+    <div class="maya-card">
+      <h3 style="margin-bottom:18px">专题更新日历</h3>
+      <div class="maya-timeline">
+        <div class="maya-topic">
+          <h3>亚洲电影观察 · 第七季</h3>
+          <p>聚焦东南亚与东亚合拍片，收录18部作品与6篇导演访谈，更新状态：持续更新。</p>
+          <ol>
+            <li>《合拍现场》· 三地制片流程对照长文</li>
+            <li>《字幕之外》· 翻译与地方口语的取舍</li>
+            <li>《潮汐那年》· 海岸纪录长片完整版</li>
+          </ol>
+        </div>
+        <div class="maya-topic">
+          <h3>老片新声 · 经典修复档案</h3>
+          <p>与资料馆合作整理修复案例，公开部分修复前后对照片段，更新状态：每月更新。</p>
+          <ol>
+            <li>《十二道工序》· 从底片清洁到数字调色</li>
+            <li>《声音重建》· 单声道修复的参数实践</li>
+            <li>《一场首映》· 修复版重映现场观察</li>
+          </ol>
+        </div>
+        <div class="maya-topic">
+          <h3>第一排座位 · 创作者圆桌</h3>
+          <p>每月邀请三位创作者讨论一个具体制作问题，现场录音整理为文字稿同步发布。</p>
+          <ol>
+            <li>《低成本如何不低质感》· 器材与光线的取舍</li>
+            <li>《短片如何进电影节》· 投递前的完整检查</li>
+            <li>《和演员谈一场戏》· 排练与信任建立</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 关键词解析长文 -->
+<section class="maya-section maya-container" id="mayaInsight" aria-labelledby="mayaInsightTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Deep Dive</p>
+      <h2 id="mayaInsightTitle">关键词解析｜玛雅论坛、亚洲电影与图霸天下如何构成一个影像社区</h2>
+    </div>
+    <p>这一段是编辑部长文，解释品牌定位、内容生态与社区运营方式，也是官网对外的完整说明。</p>
+  </div>
+  <div class="maya-article">
+    <h3>一、从论坛到品牌：玛雅论坛的长期积累</h3>
+    <p>玛雅论坛最初是一个以影视讨论为主的兴趣社区，早期成员多在分享亚洲各地影展的观片笔记、排片表与字幕资源。随着参与人数增加，单纯的讨论已经无法承载创作者的需求，社区开始有意识地把零散内容整理成结构化条目：每部影片对应信息页、每场讨论形成文字稿、每位活跃作者拥有独立档案。这个过程持续了多年，也形成了官网今天的内容底座。对品牌而言，「论坛」二字不是怀旧标签，而是一种方法：先把真实的讨论保留下来，再从中提炼可以长期沉淀的影像资产。企业在此基础上建立编辑团队与审核机制，把用户贡献与官方策展分开标注，既保留社区活力，也维持内容品质。</p>
+    <p>因此在官网上，你会看到两种并行的内容形态：一类是编辑部策划的专题与长文，强调专业性与完整度；另一类是创作者自主发布的作品与短评，强调真实与及时。两者共享同一套标签体系与检索入口，用户可以按地区、年份、题材、时长自由筛选。这种设计避免了社区内容被边缘化，也让官方发布的内容有明确归属。对持续运营的平台来说，最重要的不是一次性上线多少内容，而是让每一条内容都能被再次找到、被引用、被讨论，从而形成真正的内容生态。</p>
+    <h3>二、亚洲电影：不是地理标签，而是创作方法</h3>
+    <p>把「亚洲电影」作为一个整体讨论，容易落入笼统。官网的做法是把它拆成可操作的问题：合拍片的制片流程如何协调三地团队？方言台词在字幕阶段损失了哪些信息？低成本创作如何在有限设备下维持画面质感？老片修复时，声音与画面哪个先做？这些问题看似技术，实际决定了影像的呼吸感。我们在专题中收录的作品，多数并不追求宏大叙事，而是把镜头对准具体的人和具体的街巷：夜班店员、流动放映员、夜市摊主、面包房师傅。他们的日常被记录下来，构成亚洲城市生活的横切面。</p>
+    <blockquote>我们坚持一个判断：所谓亚洲电影的影响力，不来自题材的宏大，而来自细节的可信。当观众能从一个手势、一句方言、一束夜市灯光里认出自己的生活，影像才真正建立了连接。</blockquote>
+    <p>这也解释了为什么官网的视频条目普遍标注时长、作者、标签与数据。用户需要在不观看全片的情况下判断是否值得投入时间，创作者也需要清晰的反馈来判断内容方向。正版与高清是底线，原创与授权是前提，剩下的交给作品本身说话。</p>
+    <h3>三、图霸天下：一个更开放的影像征集机制</h3>
+    <p>「图霸天下」是官网面向社区推出的影像征集品牌，名字取自早期论坛的一句玩笑，后来被保留下来，成为每年最重要的创作者活动。与常规征稿不同，它不设过高门槛，也不以设备规格作为筛选标准，评审更关注作品是否提出了一个具体观察。第一季共收到四百余部投稿，入选作品题材包括城市通勤、菜市场清晨、旧楼拆迁前最后一周、返乡火车上的对话等。第二季把主题收窄为「一座城市的一段影像」，要求投稿者用三到十五分钟讲清楚一个地点与一段时间。</p>
+    <p>征集机制背后是社区运营的耐心：报名、上传、初审、复评、展映、回访，每个环节都在官网上公开时间表与规则，避免信息不对称。入选作者会获得首页推荐位、专题收录与创作激励，同时被邀请参与圆桌讨论。对平台而言，这不是一次比赛就结束的活动，而是持续发现新创作者、补充内容供给的长期通道。对参与者而言，投稿不是终点，作品被收录、被评论、被再次观看，才是完整的闭环。</p>
+    <h3>四、内容生态与社区治理：品质、口碑与责任</h3>
+    <p>一个影像社区能否长期运转，取决于三件事：内容是否有稳定的品质基准，讨论是否有基本的秩序，创作者是否能获得正向反馈。官网在这三方面都做了具体安排。品质方面，建立分区审核与标签复核制度，修复类内容必须标注修复来源与工序说明，访谈类内容必须附完整文字稿，避免断章取义；秩序方面，评论区设置举报与折叠机制，争议内容由编辑团队复核后处理，处理结果在动态中公示；反馈方面，点赞、收藏、评论与播放数据全部公开，创作者可以看到内容在不同渠道的表现差异。</p>
+    <p>我们同样重视社会责任。涉及真实人物与未成年人出镜的内容，需获得明确授权；涉及历史影像的资料引用，需标注来源与使用范围；涉及地域文化的描述，鼓励本地创作者参与校对。这些规则并不浪漫，却是平台值得信赖的基础。用户至上不是口号，而是把每一个可能产生误解的环节提前讲清楚。也正因如此，官网的内容更新节奏不算激进，每月固定的专题、每周的条目更新、每季的征集与展映，构成了稳定的运营节律。对长期使用者来说，这种可预期比短期热闹更重要。</p>
+    <p>回到关键词本身：玛雅论坛代表社区积累与讨论传统，亚洲电影代表内容方向与创作方法，图霸天下代表开放的征集与展示机制。三者结合，构成一个面向影迷与创作者的垂直影像品牌。它不追求覆盖所有题材，而是把亚洲电影这一件事做深：把作品整理好、把讨论留下来、把新作者推出去。官网会继续以原创、正版、高清为基本要求，以专业策展与真实记录为方法，让更多值得被看见的影像获得它应有的观众。</p>
+  </div>
+</section>
+
+<!-- 创作者矩阵 -->
+<section class="maya-section maya-container" id="mayaAuthors" aria-labelledby="mayaAuthorsTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Creators</p>
+      <h2 id="mayaAuthorsTitle">创作者矩阵｜玛雅论坛亚洲电影的作者们</h2>
+    </div>
+    <p>每位作者均经过身份与作品核验，档案包含擅长领域、作品数量与粉丝数据，点击可查看简介。</p>
+  </div>
+  <div class="maya-grid maya-grid--2">
+    <article class="maya-card maya-author-card">
+      <span class="maya-avatar" style="background:linear-gradient(140deg,#ff5a3c,#ffcf5c)">夜</span>
+      <div class="maya-author-body">
+        <h3 style="margin-bottom:2px">夜航放映员</h3>
+        <span class="maya-field">城市探索 · 老影院记录</span>
+        <p>长期跟拍亚洲各地老式影院与放映员，习惯用自然光与现场声完成叙事。作品节奏偏慢，注重空间细节与人物手上的动作，曾参与多个城市影像联展。</p>
+        <div class="maya-author-stats"><span>作品 <b>86</b></span><span>粉丝 <b>21.4万</b></span><span>收藏 <b>4.8万</b></span></div>
+        <div class="maya-actions"><button class="maya-chip" data-maya-author="夜航放映员">查看简介</button><button class="maya-chip" data-maya-fav>关注</button></div>
+      </div>
+    </article>
+
+    <article class="maya-card maya-author-card">
+      <span class="maya-avatar" style="background:linear-gradient(140deg,#4fd1c5,#7ee0d6)">十</span>
+      <div class="maya-author-body">
+        <h3 style="margin-bottom:2px">张十九</h3>
+        <span class="maya-field">剪辑教程 · 短片结构</span>
+        <p>影视后期出身，擅长把复杂的剪辑思路拆成可执行步骤。视频里常出现完整时间线与失败版本对照，强调「先想清楚再动手」，是站内教程类内容的高收藏作者。</p>
+        <div class="maya-author-stats"><span>作品 <b>134</b></span><span>粉丝 <b>33.7万</b></span><span>收藏 <b>9.1万</b></span></div>
+        <div class="maya-actions"><button class="maya-chip" data-maya-author="张十九">查看简介</button><button class="maya-chip" data-maya-fav>关注</button></div>
+      </div>
+    </article>
+
+    <article class="maya-card maya-author-card">
+      <span class="maya-avatar" style="background:linear-gradient(140deg,#8a7dff,#c2b8ff)">素</span>
+      <div class="maya-author-body">
+        <h3 style="margin-bottom:2px">素坤观察</h3>
+        <span class="maya-field">在地文化 · 东南亚市集</span>
+        <p>常驻曼谷的纪录作者，关注市集、夜市与街边小生意。习惯长时间蹲点拍摄，作品里几乎没有旁白，靠环境声与字幕交代信息，强调对拍摄对象的尊重与回访。</p>
+        <div class="maya-author-stats"><span>作品 <b>57</b></span><span>粉丝 <b>12.9万</b></span><span>收藏 <b>2.6万</b></span></div>
+        <div class="maya-actions"><button class="maya-chip" data-maya-author="素坤观察">查看简介</button><button class="maya-chip" data-maya-fav>关注</button></div>
+      </div>
+    </article>
+
+    <article class="maya-card maya-author-card">
+      <span class="maya-avatar" style="background:linear-gradient(140deg,#ffcf5c,#ff9a3c)">声</span>
+      <div class="maya-author-body">
+        <h3 style="margin-bottom:2px">声音档案室</h3>
+        <span class="maya-field">声音修复 · 老片重建</span>
+        <p>由两位声音工程师共同运营，专注老片声音修复与现场收音方案。内容以对照试听为主，配合参数与流程说明，帮助创作者理解声音在影片质感中的实际作用。</p>
+        <div class="maya-author-stats"><span>作品 <b>42</b></span><span>粉丝 <b>9.6万</b></span><span>收藏 <b>2.1万</b></span></div>
+        <div class="maya-actions"><button class="maya-chip" data-maya-author="声音档案室">查看简介</button><button class="maya-chip" data-maya-fav>关注</button></div>
+      </div>
+    </article>
+
+    <article class="maya-card maya-author-card">
+      <span class="maya-avatar" style="background:linear-gradient(140deg,#4f8cff,#8ec5ff)">岸</span>
+      <div class="maya-author-body">
+        <h3 style="margin-bottom:2px">阿岸</h3>
+        <span class="maya-field">治愈影像 · 城市夜归</span>
+        <p>独立短片导演，偏爱夜晚与室内场景，作品多围绕独处、通勤与短暂相遇。习惯一人完成拍摄与剪辑，注重情绪留白，曾多次参与社区主题展映与圆桌分享。</p>
+        <div class="maya-author-stats"><span>作品 <b>63</b></span><span>粉丝 <b>15.2万</b></span><span>收藏 <b>3.4万</b></span></div>
+        <div class="maya-actions"><button class="maya-chip" data-maya-author="阿岸">查看简介</button><button class="maya-chip" data-maya-fav>关注</button></div>
+      </div>
+    </article>
+
+    <article class="maya-card maya-author-card">
+      <span class="maya-avatar" style="background:linear-gradient(140deg,#ff7a9c,#ffb3c6)">盐</span>
+      <div class="maya-author-body">
+        <h3 style="margin-bottom:2px">盐田计划</h3>
+        <span class="maya-field">纪录长片 · 海岸与潮汐</span>
+        <p>三人纪录片小组，关注海岸线、渔业与气候变化。拍摄周期普遍较长，习惯先做田野笔记再开机，作品附完整幕后手记与设备清单，是站内幕后类内容的重要来源。</p>
+        <div class="maya-author-stats"><span>作品 <b>29</b></span><span>粉丝 <b>7.8万</b></span><span>收藏 <b>1.7万</b></span></div>
+        <div class="maya-actions"><button class="maya-chip" data-maya-author="盐田计划">查看简介</button><button class="maya-chip" data-maya-fav>关注</button></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 榜单 + 评论 -->
+<section class="maya-section maya-container" id="mayaRank" aria-labelledby="mayaRankTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Ranking &amp; Voices</p>
+      <h2 id="mayaRankTitle">热度榜与口碑｜玛雅论坛亚洲电影社区反馈</h2>
+    </div>
+    <p>榜单按近三十天综合播放、收藏与讨论计算；口碑来自实名注册用户，保留原始长度与语气差异。</p>
+  </div>
+  <div class="maya-grid maya-grid--2" style="align-items:start">
+    <div class="maya-card">
+      <h3>本周热度榜</h3>
+      <div class="maya-rank-list">
+        <div class="maya-rank-item"><div><h4>《雨夜影院线》第一集</h4><small>夜航放映员 · 城市探索</small></div><span class="maya-hot">12.8万播放</span></div>
+        <div class="maya-rank-item"><div><h4>《一场雨的三次重剪》</h4><small>张十九 · 教程干货</small></div><span class="maya-hot">7.2万播放</span></div>
+        <div class="maya-rank-item"><div><h4>《小城放映队》</h4><small>老周 · 品牌故事</small></div><span class="maya-hot">5.2万播放</span></div>
+        <div class="maya-rank-item"><div><h4>《便利店四点档》</h4><small>阿岸 · 治愈影像</small></div><span class="maya-hot">5.6万播放</span></div>
+        <div class="maya-rank-item"><div><h4>《深海来信》季播更新</h4><small>盐田计划 · 纪录长片</small></div><span class="maya-hot">新增 3 集</span></div>
+      </div>
+    </div>
+    <div class="maya-card">
+      <h3>口碑摘要</h3>
+      <div class="maya-grid" style="gap:14px">
+        <div class="maya-comment">
+          <div class="maya-comment-head"><span class="maya-avatar" style="background:#ffcf5c">A</span><b>阿岚</b><span class="maya-stars">★★★★★</span></div>
+          <p>修复对照那期看得很过瘾，把划痕清理前后的差异逐帧标出来，比很多只讲概念的教程实用。</p>
+        </div>
+        <div class="maya-comment">
+          <div class="maya-comment-head"><span class="maya-avatar" style="background:#4fd1c5">林</span><b>林间放映</b><span class="maya-stars">★★★★☆</span></div>
+          <p>专题更新节奏稳定，这点很难得。唯一的小建议是希望增加按年份筛选的功能。</p>
+        </div>
+        <div class="maya-comment">
+          <div class="maya-comment-head"><span class="maya-avatar" style="background:#ff8a5c">老</span><b>老周</b><span class="maya-stars">★★★★★</span></div>
+          <p>作为长期投稿作者，最直接的感受是反馈变清楚了：播放、收藏、评论都能看到差异，知道下一次该改哪里。</p>
+        </div>
+        <div class="maya-comment">
+          <div class="maya-comment-head"><span class="maya-avatar" style="background:#8a7dff">小</span><b>小满</b><span class="maya-stars">★★★★☆</span></div>
+          <p>第一次参加图霸天下投稿，报名流程写得很细，连文件命名规则都有说明，少了很多来回问的麻烦。</p>
+        </div>
+        <div class="maya-comment">
+          <div class="maya-comment-head"><span class="maya-avatar" style="background:#4f8cff">剪</span><b>剪辑室灯亮</b><span class="maya-stars">★★★★★</span></div>
+          <p>三次重剪那期我反复看了三遍，把同一段素材的情绪变化讲清楚了，适合刚开始做短片的人。</p>
+        </div>
+        <div class="maya-comment">
+          <div class="maya-comment-head"><span class="maya-avatar" style="background:#ff7a9c">海</span><b>海边住客</b><span class="maya-stars">★★★★☆</span></div>
+          <p>海岸纪录的画面很克制，不煽情，这点我很喜欢。希望后面能补一篇完整的器材与潮汐表说明。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 企业动态 + 合作 + FAQ -->
+<section class="maya-section maya-container" id="mayaNews" aria-labelledby="mayaNewsTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Updates</p>
+      <h2 id="mayaNewsTitle">企业动态｜玛雅论坛亚洲电影官方发布</h2>
+    </div>
+    <p>官方发布的内容会同步至公告条，长期保留在动态页，便于回溯。</p>
+  </div>
+  <div class="maya-grid maya-grid--2" style="align-items:start">
+    <div class="maya-card">
+      <h3>近期动态</h3>
+      <ul class="maya-news">
+        <li><time>11月20日</time><span><b>亚洲电影观察第七季上线</b>，首批收录18部作品与6篇导演访谈，专题页支持按地区筛选。</span></li>
+        <li><time>11月16日</time><span><b>图霸天下第二季开启报名</b>，主题为「一座城市的一段影像」，上传入口与评审名单同步公布。</span></li>
+        <li><time>11月08日</time><span><b>创作者激励计划第十二期</b>名单公布，新增27位作者，作品将进入首页轮播与专题推荐。</span></li>
+        <li><time>10月29日</time><span><b>高清片源库更新</b>，完成12部经典影片的4K修复条目校对，补充修复来源与工序说明。</span></li>
+        <li><time>10月12日</time><span><b>社区公约修订</b>，明确真实人物出镜授权要求与争议内容处理流程，处理结果将在动态中公示。</span></li>
+      </ul>
+    </div>
+    <div class="maya-grid" style="gap:20px">
+      <div class="maya-card">
+        <h3>合作品牌</h3>
+        <div class="maya-partners" style="margin-top:14px">
+          <div class="maya-partner">南岸资料馆<small>影像修复合作</small></div>
+          <div class="maya-partner">青禾影展<small>展映与策展</small></div>
+          <div class="maya-partner">木岛学院<small>教学与课程</small></div>
+          <div class="maya-partner">潮声制作<small>声音与后期</small></div>
+        </div>
+      </div>
+      <div class="maya-cta" style="padding:24px">
+        <div>
+          <h3 style="color:var(--maya-accent-2)">加入创作社区</h3>
+          <p>提交你的作品、参与圆桌讨论，或报名「图霸天下」影像征集。官网会为每条合格投稿安排分区归档与数据回访。</p>
+          <div class="maya-actions">
+            <button class="maya-btn maya-btn--primary" data-maya-submit type="button">投稿入口</button>
+            <button class="maya-btn" data-maya-report type="button">反馈问题</button>
+          </div>
+        </div>
+        <div>
+          <svg viewBox="0 0 320 220" role="img" aria-label="投稿入口插画：一台放映机把光束投向展映屏幕">
+            <rect width="320" height="220" fill="#131c2b"/>
+            <rect x="26" y="122" width="94" height="58" rx="10" fill="#22304a" stroke="#4fd1c5"/>
+            <circle cx="54" cy="151" r="16" fill="#0f1828" stroke="#ffcf5c" stroke-width="3"/>
+            <circle cx="96" cy="151" r="12" fill="#0f1828" stroke="#ff5a3c" stroke-width="3"/>
+            <polygon points="120,138 268,86 268,178 120,166" fill="url(#mayaBeam)" opacity=".35"/>
+            <rect x="238" y="70" width="60" height="104" rx="6" fill="#e7dfd0" opacity=".14" stroke="#ffcf5c" stroke-opacity=".5"/>
+            <path d="M26 196 h94" stroke="#ff5a3c" stroke-width="4"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="maya-section maya-container" id="mayaFaq" aria-labelledby="mayaFaqTitle">
+  <div class="maya-section-head">
+    <div>
+      <p class="maya-kicker">Help Center</p>
+      <h2 id="mayaFaqTitle">常见问题｜玛雅论坛 亚洲电影 图霸天下使用说明</h2>
+    </div>
+    <p>以下问题来自社区提问与客服记录，点击标题即可展开。</p>
+  </div>
+  <div class="maya-faq">
+    <details open>
+      <summary>官网的内容是否需要注册才能完整观看？</summary>
+      <p>公开条目可直接观看，高清版本与完整文字稿需登录后查看。注册后可以收藏、点赞与参与评论，投稿功能也需完成创作者身份核验。</p>
+    </details>
+    <details>
+      <summary>「图霸天下」影像征集对设备和时长有硬性要求吗？</summary>
+      <p>没有设备门槛，评审更关注观察是否具体。作品时长建议三到十五分钟，成片需为原创或持有完整授权，提交时请附简短创作说明。</p>
+    </details>
+    <details>
+      <summary>修复类内容的来源如何标注？</summary>
+      <p>每条修复内容都会注明原始素材来源、修复团队与工序说明，部分条目附修复前后对照片段。如发现标注缺失，可通过反馈入口提交，我们会复核修正。</p>
+    </details>
+    <details>
+      <summary>投稿后多久会有结果？</summary>
+      <p>初审通常在十个工作日内完成，复评与展映安排会在每次征集的官方时间表中公布。未通过的作品会收到具体提示，方便修改后再次提交。</p>
+    </details>
+    <details>
+      <summary>评论区的内容管理规则是什么？</summary>
+      <p>社区鼓励具体、真诚的讨论。涉及人身攻击、未经授权泄露个人信息或商业广告的内容将被折叠或删除，处理结果会在动态页公示。</p>
+    </details>
+    <details>
+      <summary>是否可以申请转载官网的文章或视频？</summary>
+      <p>请通过联系入口说明用途、渠道与范围。官方发布的策展文章一般允许带原文链接转载，创作者作品需同时取得作者授权，确保正版使用。</p>
+    </details>
+  </div>
+</section>
+
+<footer class="maya-footer">
+  <div class="maya-container">
+    <div class="maya-footer-grid">
+      <div>
+        <div class="maya-brand" style="margin-bottom:12px">
+          <span class="maya-brand-mark">玛</span>
+          <span>
+            <span class="maya-brand-name">玛雅论坛 亚洲电影 图霸天下</span>
+            <span class="maya-brand-sub">MAYA ASIAN CINEMA</span>
+          </span>
+        </div>
+        <p style="color:var(--maya-muted);font-size:13.5px;max-width:340px">专注亚洲电影的垂直影像平台与企业级内容社区，坚持原创、正版、高清与专业策展，持续运营，值得信赖。</p>
+        <p style="color:#7f8daa;font-size:12.5px">联系我们：content@mayacinema.example　合作与投稿请通过站内入口提交。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#mayaFocus">焦点推荐</a></li>
+          <li><a href="#mayaVideos">影像放映厅</a></li>
+          <li><a href="#mayaTopics">专题企划</a></li>
+          <li><a href="#mayaInsight">关键词解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区与支持</h4>
+        <ul>
+          <li><a href="#mayaAuthors">创作者矩阵</a></li>
+          <li><a href="#mayaRank">热度榜与口碑</a></li>
+          <li><a href="#mayaFaq">常见问题</a></li>
+          <li><a href="#mayaNews">企业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方说明</h4>
+        <ul>
+          <li>本页为品牌官方网站首页</li>
+          <li>内容版权归原作者与平台共同持有</li>
+          <li>除特别标注外，均为原创或授权发布</li>
+          <li>社区公约与投稿规则见帮助中心</li>
+        </ul>
+      </div>
+    </div>
+    <div class="maya-footer-bottom">
+      <span>© 2026 玛雅论坛 亚洲电影 图霸天下 · 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容备案：影字 2026-1024 ｜ 社区服务与内容审核均由官方团队执行</span>
+    </div>
+  </div>
+</footer>
+
+<button class="maya-totop" id="mayaToTop" aria-label="回到顶部">↑</button>
+<div class="maya-toast" id="mayaToast" role="status" aria-live="polite"></div>
+
+<div class="maya-modal" id="mayaModal" role="dialog" aria-modal="true" aria-labelledby="mayaModalTitle">
+  <div class="maya-modal-box">
+    <button class="maya-modal-close" id="mayaModalClose" aria-label="关闭">✕</button>
+    <h3 id="mayaModalTitle">提示</h3>
+    <div id="mayaModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toast = document.getElementById('mayaToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('maya-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('maya-show'); }, 2200);
+  }
+
+  // 移动端导航折叠
+  var burger = document.getElementById('mayaBurger');
+  var nav = document.getElementById('mayaNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('maya-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '✕' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 760){
+      nav.classList.remove('maya-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  // 搜索前端反馈
+  var form = document.getElementById('mayaSearchForm');
+  var input = document.getElementById('mayaSearchInput');
+  var hint = document.getElementById('mayaSearchHint');
+  var pool = ['亚洲电影观察','图霸天下','老片修复','夜航放映员','分镜与重剪','市集长镜头','纪录片幕后','创作者圆桌','声音重建','经典重映'];
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var q = input.value.trim();
+    if(!q){
+      hint.textContent = '请输入影片、专题或创作者名称';
+      return;
+    }
+    var hit = pool.filter(function(x){ return x.indexOf(q) > -1 || q.indexOf(x) > -1; });
+    if(hit.length){
+      hint.textContent = '找到 ' + hit.length + ' 个相关结果：' + hit.join('、');
+    }else{
+      hint.textContent = '暂未匹配「' + q + '」，已为你推荐：图霸天下、老片修复、创作者圆桌';
+    }
+  });
+
+  // 点赞 +1 / 取消
+  document.querySelectorAll('[data-maya-like]').forEach(function(btn){
+    var base = parseInt(btn.getAttribute('data-count'), 10) || 0;
+    var liked = false;
+    btn.textContent = '赞 ' + base;
+    btn.addEventListener('click', function(){
+      liked = !liked;
+      var n = liked ? base + 1 : base;
+      btn.textContent = '赞 ' + n;
+      btn.classList.toggle('maya-on', liked);
+      showToast(liked ? '已点赞，感谢支持' : '已取消点赞');
+    });
+  });
+
+  // 收藏切换
+  document.querySelectorAll('[data-maya-fav]').forEach(function(btn){
+    var on = false;
+    btn.addEventListener('click', function(){
+      on = !on;
+      btn.classList.toggle('maya-on', on);
+      btn.textContent = on ? '已收藏 ♥' : '收藏';
+      showToast(on ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  // 复制链接
+  function copyLink(label){
+    var url = window.location.href.split('#')[0] + '#mayaVideos';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){
+        showToast(label + '已复制到剪贴板');
+      }).catch(function(){
+        showToast('复制失败，请手动复制地址栏链接');
+      });
+    }else{
+      showToast('复制失败，请手动复制地址栏链接');
+    }
+  }
+  document.querySelectorAll('[data-maya-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      copyLink(btn.textContent.indexOf('专题') > -1 ? '专题链接' : '内容链接');
+    });
+  });
+
+  // 分享
+  var shareBtn = document.getElementById('mayaShareBtn');
+  if(shareBtn){
+    shareBtn.addEventListener('click', function(){
+      if(navigator.share){
+        navigator.share({title:'玛雅论坛 亚洲电影 图霸天下', text:'亚洲电影影像社区与创作者平台', url:window.location.href}).catch(function(){});
+      }else{
+        showToast('可分享至微信、微博或 QQ：本页地址已备好');
+      }
+    });
+  }
+
+  // 通用弹窗
+  var modal = document.getElementById('mayaModal');
+  var modalTitle = document.getElementById('mayaModalTitle');
+  var modalBody = document.getElementById('mayaModalBody');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('maya-open');
+    document.getElementById('mayaModalClose').focus();
+  }
+  function closeModal(){ modal.classList.remove('maya-open'); }
+  document.getElementById('mayaModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  // 作者简介弹窗
+  var authorInfo = {
+    '夜航放映员':'长期跟拍亚洲各地老式影院与放映员，作品以自然光与现场声为主，节奏偏慢，注重空间与人物动作细节。曾参与多个城市影像联展，并担任图霸天下评审。',
+    '张十九':'影视后期出身，擅长把复杂的剪辑思路拆成可执行步骤。视频里常出现完整时间线与失败版本对照，强调先想清楚再动手，是站内教程类内容的高收藏作者。',
+    '素坤观察':'常驻曼谷的纪录作者，关注市集、夜市与街边小生意。习惯长时间蹲点拍摄，作品几乎不用旁白，强调对拍摄对象的尊重与回访。',
+    '声音档案室':'由两位声音工程师共同运营，专注老片声音修复与现场收音方案。内容以对照试听为主，配合参数与流程说明，帮助创作者理解声音对质感的影响。',
+    '阿岸':'独立短片导演，偏爱夜晚与室内场景，作品多围绕独处、通勤与短暂相遇。习惯一人完成拍摄与剪辑，注重情绪留白，多次参与社区展映。',
+    '盐田计划':'三人纪录片小组，关注海岸线、渔业与气候变化。拍摄周期较长，习惯先做田野笔记再开机，作品附完整幕后手记与设备清单。'
+  };
+  document.querySelectorAll('[data-maya-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-maya-author');
+      openModal(name + ' · 创作者档案',
+        '<p style="color:#c8d3e8">' + (authorInfo[name] || '该创作者资料正在补充中。') + '</p>' +
+        '<p style="color:#9aa8c4;font-size:13.5px">擅长领域与作品数据可在创作者矩阵中查看，关注后可在动态页收到更新提醒。</p>' +
+        '<button class="maya-btn maya-btn--primary" id="mayaFollowBtn" type="button">关注该创作者</button>');
+      var fb = document.getElementById('mayaFollowBtn');
+      if(fb){ fb.addEventListener('click', function(){ showToast('已关注 ' + name); closeModal(); }); }
+    });
+  });
+
+  // 投稿弹窗
+  document.querySelectorAll('[data-maya-submit]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal('投稿入口 · 图霸天下影像征集',
+        '<p style="color:#c8d3e8">第二季主题：一座城市的一段影像。请准备作品文件、创作说明与授权声明，截止日期为 12 月 15 日。</p>' +
+        '<ul style="color:#c8d3e8;font-size:14.5px;line-height:1.9;padding-left:20px">' +
+        '<li>时长建议 3–15 分钟，原创或持有完整授权</li>' +
+        '<li>提交前完成创作者身份核验</li>' +
+        '<li>初审十个工作日内反馈，未通过会附具体建议</li></ul>' +
+        '<button class="maya-btn maya-btn--primary" id="mayaSubmitGo" type="button">进入上传流程</button>');
+      var go = document.getElementById('mayaSubmitGo');
+      if(go){ go.addEventListener('click', function(){ showToast('上传通道已开启，请在登录后提交'); closeModal(); }); }
+    });
+  });
+
+  // 反馈弹窗
+  document.querySelectorAll('[data-maya-report]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal('问题反馈',
+        '<p style="color:#c8d3e8">请简要描述你遇到的问题，包括页面位置与期望结果。我们会在三个工作日内回复。</p>' +
+        '<textarea id="mayaReportText" rows="4" style="width:100%;border-radius:10px;border:1px solid #2c3855;background:#121a29;color:#e8edf7;padding:10px;font-family:inherit" placeholder="例如：某条目修复来源标注缺失"></textarea>' +
+        '<div style="margin-top:12px"><button class="maya-btn maya-btn--primary" id="mayaReportSend" type="button">提交反馈</button></div>');
+      var send = document.getElementById('mayaReportSend');
+      if(send){ send.addEventListener('click', function(){
+        var t = document.getElementById('mayaReportText');
+        if(!t.value.trim()){ showToast('请先填写反馈内容'); return; }
+        showToast('反馈已提交，感谢你的帮助');
+        closeModal();
+      }); }
+    });
+  });
+
+  // 回到顶部
+  var toTop = document.getElementById('mayaToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ toTop.classList.add('maya-show'); }
+    else{ toTop.classList.remove('maya-show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // 数字滚动
+  var counted = false;
+  function runCount(){
+    if(counted) return;
+    counted = true;
+    document.querySelectorAll('[data-maya-count]').forEach(function(el){
+      var target = parseInt(el.getAttribute('data-maya-count'), 10) || 0;
+      var start = Math.floor(target * 0.6);
+      var dur = 900, t0 = null;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var val = Math.floor(start + (target - start) * p);
+        el.textContent = target >= 10000 ? (val / 10000).toFixed(1) + '万' : val;
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target >= 10000 ? (target / 10000).toFixed(1) + '万' : target;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  window.addEventListener('load', runCount);
+  setTimeout(runCount, 1200);
+})();
+</script>
+</body>
+          </html>
